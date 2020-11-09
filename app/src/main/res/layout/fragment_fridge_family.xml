@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fridgeListLayout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fridgeMemberList"
+            android:name="com.example.yangliu.fridgemate.FridgeFamilyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="383dp"
+            android:paddingBottom="10dp"
+            tools:context=".fridge_family.FridgeFamilyFragment"
+            tools:listitem="@layout/fridge_member_list_item">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fridgeListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:toolbarStyle"
+        android:clipToPadding="true"
+        android:elevation="6dp"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fridgeList"
+            android:name="com.example.yangliu.fridgemate.FridgeFamilyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:foregroundGravity="center"
+            android:layoutAnimation="@anim/bottom_up_layout"
+            tools:context=".fridge_family.FridgeFamilyFragment"
+            tools:listitem="@layout/fridge_list_item">
+            <!--android:orientation="horizontal"-->
+            <!--android:scrollbarAlwaysDrawHorizontalTrack="true"-->
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

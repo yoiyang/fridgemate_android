@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fridgemate.yangliu.fridgemate.ContentScrollingFragment">
+
+    <item
+        android:id="@+id/rename_fridge"
+        android:title="Rename" />
+    <item
+        android:id="@+id/copyId"
+        android:title="Copy Fridge ID" />
+
+    <item
+        android:id="@+id/leave_fridge"
+        android:title="@string/leave_fridge" />
+
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fridgemate.yangliu.fridgemate.EditProfile">
+
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/ic_camera_alt_black_24dp"
+        android:title="Take a photo"
+        />
+    <item
+        android:id="@+id/local"
+        android:icon="@drawable/ic_recipe_icon"
+        android:title="Choose a photo"
+        />
+</menu>

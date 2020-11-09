@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+//Crashlytics
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'fridgemateKey'
+            keyPassword '0o9i8u7y6t'
+            storeFile file('/Users/YangLiu/fridgemateKey')
+            storePassword '0o9i8u7y6t'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.fridgemate.yangliu.fridgemate"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 22
+        versionName "2.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+        }
+    }
+    buildToolsVersion '27.0.3'
+}
+
+repositories {
+    mavenCentral()
+    maven() {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // firebase
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    implementation 'com.google.android.gms:play-services-vision:15.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.2'
+    // facebook authentication
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+    // unit testing
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    // Lifecycle components
+//    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+//    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+    // card view
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    // glide image library
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    api 'de.hdodenhof:circleimageview:1.2.1'
+    // floating action button menu
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.clans:fab:1.6.2'
+    // profile image bottom up menu
+    api 'com.cocosw:bottomsheet:1.3.1@aar'
+    implementation 'com.google.firebase:firebase-firestore:17.1.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.2'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    // list animation
+    implementation 'com.android.support:support-dynamic-animation:27.1.1'
+    // tutorial
+    implementation 'com.github.apl-devs:appintro:v4.2.3'
+    //Crashlytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+}
+
+apply plugin: 'com.google.gms.google-services'

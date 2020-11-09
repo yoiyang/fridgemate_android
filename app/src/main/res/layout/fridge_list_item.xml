@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fridgeFamilyCanvas"
+    android:layout_width="86dp"
+    android:layout_height="85dp"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_weight="6"
+    android:background="@drawable/round_button_pressed"
+    android:elevation="3dp"
+    android:padding="12dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:id="@+id/fridge_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/hint_image"
+            android:requiresFadingEdge="none"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_group_black_24dp" />
+
+        <TextView
+            android:id="@+id/name_view"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/name"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
